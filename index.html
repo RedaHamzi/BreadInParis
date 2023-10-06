@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/myFreamwork.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <title>Taste Bread In Paris</title>
+</head>
+<body>
+    <div id="app">
+        <div class="page">
+            <div class="overlay position-absolute" :style="{'opacity': clicked? '1':'0'}" @click="clicked=!clicked"></div>
+            <div class="header bg-white py-15 px-30 d-flex justify-content-end">
+                <nav class="gap-30 t-capitalize" :style="{'transform': clicked? 'translateX(0)': ''}">
+                    <a href="#home" class="text-dark fw-600">home</a>
+                    <a href="#story" class="text-dark fw-600">our story</a>
+                    <a href="#menu" class="text-dark fw-600">our menu</a>
+                    <a href="#customers" class="text-dark fw-600">our customers</a>
+                    <a href="#visit" class="text-dark fw-600">visit us</a>
+                </nav>
+                <div class="toggle-icon fs-20 fw-800 d-not-mb-none" @click="clicked = !clicked">
+                    <i class="fas fa-bars toggle-menu"></i>
+                </div>
+            </div>
+            <!--section begin-->
+            <section id="home" class="home h-min-100vh pt-50 pb-40 position-relative">
+                <div class="home-overlay position-absolute"></div>
+                <div class="container position-relative">
+                    <div class="info d-flex column align-items-center text-center text-white">
+                        <div class="fs-20 fw-700 t-uppercase">la lune french bistro</div>
+                        <h2 class="fs-mb-40 fw-700 t-uppercase mb-50">
+                            a taste of paris
+                        </h2>
+                        <button class="button-white square fs-not-mb-30 fs-mb-20">Dine with Us</button>
+                    </div>
+                </div>
+            </section>
+            <!--story begin-->
+            <section id="story" class="story sections-bg h-min-100vh py-60">
+                <div class="container">
+                    <div class="parent d-flex">
+                        <div class="image-holder d-flex flex-1">
+                            <div><img src="./imgs/Screenshot 2023-10-03 111159.png" alt=""></div>
+                            <div><img src="./imgs/Screenshot 2023-10-03 111223.png" alt=""></div>
+                        </div>
+                        <!-- seperator -->
+                        <div class="info flex-1">
+                            <h3 class="fs-not-mb-45 fs-mb-30 fw-700 mb-20">A FRENCH FLING</h3>
+                            <p class="d-block mb-35 fs-not-mb-25 fs-mb-20">La Lune French Bistro was born from a love of all things Paris. Our founder and chef Ingrid Correa spent three amazing years in the City of Love, training under the industry's best. She brought home everything she learned - the flavors, the feelings, the family-style cafe - so that you can get a taste of Paris, too.</p>
+                            <button class="button-black fs-20 fw-700 t-capitalize px-30">book now</button>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <!--menu begin-->
+            <section class="menu pb-60 sections-bg text-sm-center" id="menu">
+                <div class="container">
+                    <di class="row justify-content-between">
+                        <div class="col-md-3">
+                            <div class="info">
+                                <h3 class="fs-not-mb-45 fs-mb-30 fw-700 mb-20">FLAVORS OF FRANCE</h3>
+                                <p class="fs-20 fw-600">Paris is a melting pot, as our food can attest. Take a bite and savor la vie délicieuse!</p>
+                            </div>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="row mb-20 align-items-start">
+                                <div class="col-md-4">
+                                    <div class="img-holder"><img src="./imgs/menu_1.png" alt=""></div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="img-holder"><img src="./imgs/menu_2.png" alt=""></div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="img-holder"><img src="./imgs/menu_3.png" alt=""></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="menu-des text-center fs-18 t-uppercase fw-700">
+                                        MOUTHWATERING APPETIZERS
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-4">
+                                    <div class="menu-des text-center fs-18 t-uppercase fw-700">
+                                        WHOLESOME MAINS
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="menu-des text-center fs-18 t-uppercase fw-700">
+                                        SWEET ENDINGS
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </di>
+                </div>
+            </section>
+            <!--customers begin-->
+            <section class="customers py-60 bg-black" id="customers">
+                <div class="container">
+                    <h2 class="title fs-not-mb-45 fs-mb-30 text-white fw-800 t-uppercase text-center">LOVE FOR LA LUNE</h2>
+                    <div class="row align-items-baseline">
+                        <div class="col-md-4">
+                            <div class="my-card mb-40 text-white">
+                                <div class="icon fs-30 mb-30"><i class="fa-solid fa-quote-left"></i></div>
+                                <h4 class="t-uppercase fs-25 mb-20">transported to paris</h4>
+                                <p class="d-block mb-30 fs-18">One bite and I felt like I was back in France. Chef Ingrid and her team have outdone themselves!</p>
+                                <p class="d-block fs-18">- Teddy, Entrepreneur</p>
+                            </div>
+                        </div>
+                        <!--this a col seperator-->
+                        <div class="col-md-4">
+                            <div class="my-card mb-40 text-white">
+                                <div class="icon fs-30 mb-30"><i class="fa-solid fa-quote-left"></i></div>
+                                <h4 class="t-uppercase fs-25 mb-20">LOVELY BISTRO</h4>
+                                <p class="d-block mb-30 fs-18">The ambience was great - and the food even better! Simple recipes done well, with top-notch ingredients. Will be back!</p>
+                                <p class="d-block fs-18">- Dani, Mother</p>
+                            </div>
+                        </div>
+                        <!--this a col seperator-->
+                        <div class="col-md-4">
+                            <div class="my-card mb-40 text-white">
+                                <div class="icon fs-30 mb-30"><i class="fa-solid fa-quote-left"></i></div>
+                                <h4 class="t-uppercase fs-25 mb-20">TRANSPORTED TO PARIS</h4>
+                                <p class="d-block mb-30 fs-18">Eating here made me miss Paris so much. What a treat! I will be bringing my client meetings here.</p>
+                                <p class="d-block fs-18">- Carly, Entrepreneur</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--customers begin-->
+            <section class="visit sections-bg" id="visit">
+                <div class="mycontainer">
+                    <div class="parent d-flex justify-content-between">
+                        <div class="col-md-6">
+                            <img src="./imgs/visit_sec.png" alt="">
+                        </div>
+                        <div class="col-md-5 d-flex align-items-center py-40">
+                            <div class="contact-info">
+                                <h3 class="fs-not-mb-45 fs-mb-35 fw-900 t-uppercase">
+                                    SEE YOU SOON
+                                </h3>
+                                <div class="d-flex column gap-40">
+                                    <div class="info-bar d-flex column gap-10">
+                                        <span class="fw-600 t-uppercase fs-25">PHONE NUMBER</span>
+                                        <span class="t-uppercase fs-23">(123) 456-7890</span>
+                                    </div>
+                                    <!--bar-info seperator-->
+                                    <div class="info-bar d-flex column gap-10">
+                                        <span class="fw-600 t-uppercase fs-25">EMAIL ADDRESS</span>
+                                        <span class="t-uppercase fs-23">hello@reallygreatsite.com</span>
+                                    </div>
+                                    <!--bar-info seperator-->
+                                    <div class="info-bar d-flex column gap-10">
+                                        <span class="fw-600 t-uppercase fs-25">RESTAURANT</span>
+                                        <span class="t-uppercase fs-23">123 Anywhere St. Any City, ST 12345
+
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--footer begin-->
+            <footer class="py-15 text-center bg-black text-white t-capitalize fs-20">
+                made with <span class="fw-900"><i class="fa-solid fa-heart"></i></span> by <span class="fs-25 fw-800">RYL</span>
+            </footer>
+        </div>
+    </div>
+<script src="./js/all.min.js"></script>    
+<script src="./js/bootstrap.bundle.min.js"></script>    
+<script src="./js/vue.js"></script>
+<script>
+    var app = new Vue({
+        el: "#app",
+        data: {
+            clicked: false,
+        }
+    })
+</script>    
+</body>
+</html>
